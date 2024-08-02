@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dynamic Resource Table</h1>
+    <label for="patientCount">Number of Patients:</label>
+    <input type="number" id="patientCount" value="1" onchange="updateTable()">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Resource Type</th>
+                <th>Count per Patient</th>
+                <th>Avg. Size / Resource (kb)</th>
+                <th>Update Count</th>
+                <th>Total Storage (GB)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Patients</td>
+                <td><div id="patientsCount">1</div></td>
+                <td><div id="patientsAvgSize">5</div></td>
+                <td><div id="patientsUpdateCount">10.0</div></td>
+                <td><div id="patientsTotal"></div></td>
+            </tr>
+            <tr>
+                <td>Encounters</td>
+                <td><div id="encountersCount">10</div></td>
+                <td><div id="encountersAvgSize">2</div></td>
+                <td><div id="encountersUpdateCount">2.0</div></td>
+                <td><div id="encountersTotal"></div></td>
+            </tr>
+            <tr>
+                <td>Coverage</td>
+                <td><div id="coverageCount">1</div></td>
+                <td><div id="coverageAvgSize">2</div></td>
+                <td><div id="coverageUpdateCount">2.0</div></td>
+                <td><div id="coverageTotal"></div></td>
+            </tr>
+            <tr>
+                <td>DiagnosticReport</td>
+                <td><div id="diagnosticReportCount">10</div></td>
+                <td><div id="diagnosticReportAvgSize">2</div></td>
+                <td><div id="diagnosticReportUpdateCount">2.0</div></td>
+                <td><div id="diagnosticReportTotal"></div></td>
+            </tr>
+            <tr>
+                <td>Observation</td>
+                <td><div id="observationCount">15</div></td>
+                <td><div id="observationAvgSize">2</div></td>
+                <td><div id="observationUpdateCount">2.0</div></td>
+                <td><div id="observationTotal"></div></td>
+            </tr>
+            <tr>
+                <td>MedicationRequest</td>
+                <td><div id="medicationRequestCount">10</div></td>
+                <td><div id="medicationRequestAvgSize">2</div></td>
+                <td><div id="medicationRequestUpdateCount">2.0</div></td>
+                <td><div id="medicationRequestTotal"></div></td>
+            </tr>
+            <tr>
+                <td>Media</td>
+                <td><div id="mediaCount">15</div></td>
+                <td><div id="mediaAvgSize">2</div></td>
+                <td><div id="mediaUpdateCount">2.0</div></td>
+                <td><div id="mediaTotal"></div></td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td><div id="otherCount">438</div></td>
+                <td><div id="otherAvgSize">2</div></td>
+                <td><div id="otherUpdateCount">2.0</div></td>
+                <td><div id="otherTotal"></div></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><div id="totalCount"></div></td>
+                <td></td>
+                <td></td>
+                <td><div id="totalStorage"></div></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
